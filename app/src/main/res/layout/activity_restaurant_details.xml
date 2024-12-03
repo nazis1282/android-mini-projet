@@ -1,0 +1,55 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:osm="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Restaurant Name -->
+        <TextView
+            android:id="@+id/tvRestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:text="RestaurantName"/>
+
+        <!-- Restaurant Address -->
+        <TextView
+            android:id="@+id/tvRestaurantAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:text="RestaurantAddress"/>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/tvRestaurantRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Map Placeholder -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/osm_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Add to Favorites Button -->
+        <Button
+            android:onClick="addtofavorites"
+            android:id="@+id/btnAddToFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Favorites" />
+    </LinearLayout>
+</ScrollView>
